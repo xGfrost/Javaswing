@@ -2,6 +2,7 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import com.mysql.jdbc.Driver;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -23,7 +24,7 @@ public class connection {
             DriverManager.registerDriver(new com.mysql.jdbc.Driver());
             MySQLConfig = DriverManager.getConnection(url, user, pass);
         }catch(SQLException e){
-            System.out.println("KONEKSE KE DATABASE GAGAL" + e.getMessage());
+            System.out.println("KONEKSI KE DATABASE GAGAL" + e.getMessage());
         }
         return MySQLConfig;
     }
