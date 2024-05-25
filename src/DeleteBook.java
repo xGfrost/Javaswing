@@ -109,7 +109,7 @@ public class DeleteBook extends javax.swing.JFrame {
         // establish connection  
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost/perpustakaan_pbo", "root", "");  
         Statement statement = con.createStatement();  
-        statement.executeUpdate("DELETE FROM buku WHERE ID_BUKU=" + jTextField1.getText() + "");  
+        statement.executeUpdate("DELETE FROM buku WHERE ID_BUKU='" + jTextField1.getText() + "'");  
         JOptionPane.showMessageDialog(null, "Record deleted...");  
         statement.close();  
         con.close();  

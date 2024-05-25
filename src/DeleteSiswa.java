@@ -110,7 +110,7 @@ public class DeleteSiswa extends javax.swing.JFrame {
         // establish connection  
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost/perpustakaan_pbo", "root", "");  
         Statement statement = con.createStatement();  
-        statement.executeUpdate("DELETE FROM anggota WHERE ID_ANGGOTA=" + jTextField1.getText() + "");  
+        statement.executeUpdate("DELETE FROM anggota WHERE ID_ANGGOTA='" + jTextField1.getText() + "'");  
         JOptionPane.showMessageDialog(null, "Record deleted...");  
         statement.close();  
         con.close();  
